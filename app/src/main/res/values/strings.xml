@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="helloText">Welcome back</string>
+    <string name="sign_in_label">sign in</string>
+    <string name="passwordHint">Password</string>
+    <string name="emailHint">Email</string>
+    <string name="imageDescription">StarIcon</string>
+    <string name="buttonIconDescription">arrowIcon</string>
+    <string name="searched_image_Description">Searched image</string>
+</resources>
