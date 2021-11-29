@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="peach">#FEADA5</color>
     <color name="purple_custom">#A376AF</color>
+    <color name="textInputHintColor">#99000000</color>
 </resources>

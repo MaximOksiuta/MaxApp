@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 
 class PictureSearchActivity : AppCompatActivity() {
     private lateinit var etSearchRequest: EditText
@@ -24,6 +25,8 @@ class PictureSearchActivity : AppCompatActivity() {
             Glide
                 .with(this)
                 .load(url)
+                .skipMemoryCache(true)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .placeholder(R.drawable.ic_baseline_cloud_download_24)
                 .into(imageView);
         })
