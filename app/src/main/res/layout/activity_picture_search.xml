@@ -67,39 +67,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view5"
-        app:srcCompat="@drawable/ic_baseline_cloud_download_24" />
+        app:srcCompat="@drawable/transparent_background" />
 
-    <EditText
-        android:id="@+id/et_SearchRequest"
+    <ProgressBar
+        android:id="@+id/pbLoadImage"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_searchedImage"
+        app:layout_constraintEnd_toEndOf="@+id/iv_searchedImage"
+        app:layout_constraintStart_toStartOf="@+id/iv_searchedImage"
+        app:layout_constraintTop_toTopOf="@+id/iv_searchedImage" />
+
+    <TextView
+        android:id="@+id/tvLoadImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:hint="Search"
-        android:inputType="textPersonName"
-        android:paddingHorizontal="20dp"
-        android:paddingBottom="20dp"
-        android:textColor="@android:color/darker_gray"
-        android:textColorHint="@android:color/darker_gray"
-        android:textSize="16sp"
+        android:text="@string/search_result_here"
+        android:gravity="center"
+        android:maxWidth="300dp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.357"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        android:fontFamily="@font/rubik_mono_one"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_searchedImage"
+        app:layout_constraintEnd_toEndOf="@+id/iv_searchedImage"
+        app:layout_constraintStart_toStartOf="@+id/iv_searchedImage"
+        app:layout_constraintTop_toTopOf="@+id/iv_searchedImage" />
 
-    <ImageButton
-        android:id="@+id/btnSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:backgroundTint="@color/white"
-        app:tint="@android:color/darker_gray"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/et_SearchRequest"
-        app:layout_constraintStart_toEndOf="@+id/et_SearchRequest"
-        app:layout_constraintTop_toTopOf="@+id/et_SearchRequest"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_search_24"
-        tools:ignore="SpeakableTextPresentCheck" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchInputTextLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:textColorHint="@color/textInputHintColor"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/textInputHintColor"
+        app:endIconDrawable="@drawable/ic_baseline_image_search_24"
+        app:endIconMode="custom"
+        app:endIconTint="@color/textInputHintColor"
+        app:hintTextColor="@color/textInputHintColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:hint="@string/imageSearchETHint"
+            android:textColor="@color/textInputHintColor" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

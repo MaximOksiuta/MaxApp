@@ -7,4 +7,7 @@
     <string name="imageDescription">StarIcon</string>
     <string name="buttonIconDescription">arrowIcon</string>
     <string name="searched_image_Description">Searched image</string>
+    <string name="search_result_here">Здесь будет результат поиска</string>
+    <string name="load_error">Ошибка загрузки</string>
+    <string name="imageSearchETHint">Поиск картинки</string>
 </resources>

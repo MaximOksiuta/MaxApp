@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkEmail(email: String): Boolean{
         return if (email.isNotBlank() && email.count { ch -> ch == '@'} == 1 &&
-            email.substringBefore('@').substringBefore('+').trimMargin(".").length >= 2 &&
+            email.substringBefore('@').substringBefore('+').replace(".", "").length >= 2 &&
             email.substringAfter('@').count{ch -> ch == '.'} == 1 &&
             email.substringAfter('@').substringBefore('.').isNotBlank() &&
             email.substringAfterLast('.').isNotBlank()){
