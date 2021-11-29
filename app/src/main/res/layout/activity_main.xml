@@ -81,19 +81,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline2" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_marginTop="44dp"
-        android:fontFamily="@font/rubik_mono_one"
-        android:text="@string/sign_in_label"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/passwordInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInputLayout"
         android:layout_width="0dp"
@@ -153,17 +140,26 @@
             android:visibility="visible" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSignin"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:backgroundTint="@color/white"
-        android:contentDescription="@string/buttonIconDescription"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:gravity="start|center_vertical"
+        android:text="@string/sign_in_label"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:icon="@drawable/ic_arrow_icon"
+        app:iconGravity="end"
+        app:iconSize="70dp"
+        app:iconTint="@color/white"
+        app:iconTintMode="multiply"
+        android:padding="0dp"
+        app:rippleColor="@color/peach_transparent"
         app:layout_constraintEnd_toEndOf="@+id/passwordInputLayout"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:srcCompat="@drawable/ic_arrow_icon"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintStart_toStartOf="@+id/passwordInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
